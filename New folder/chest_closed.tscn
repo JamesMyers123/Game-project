@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5smi3xt5wuwl"]
+
+[ext_resource type="Texture2D" uid="uid://ccrdhq8y1ml1g" path="res://Art/sprite/chest_closed.png" id="1_l6yyu"]
+
+[node name="Sprite2D" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_l6yyu")

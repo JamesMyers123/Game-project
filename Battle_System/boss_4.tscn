@@ -1,0 +1,547 @@
+[gd_scene load_steps=33 format=3 uid="uid://cxm8ts3h61hrp"]
+
+[ext_resource type="Script" path="res://Battle_System/boss_4.gd" id="1_3ld6m"]
+[ext_resource type="Texture2D" uid="uid://bbq2y5eia1u21" path="res://Art/Back ground/fight background.jpg" id="2_ftxm6"]
+[ext_resource type="Texture2D" uid="uid://cvo6x7euc4okr" path="res://Art/Enemy/placeholder.png" id="3_583nf"]
+[ext_resource type="AudioStream" uid="uid://dtv3w4q11w6mg" path="res://Sound/battle/fireball-whoosh-2-179126.mp3" id="4_lxgmr"]
+[ext_resource type="AudioStream" uid="uid://b1r5gkr1p8y8o" path="res://Sound/battle/Frostbolt-Magic-Attack-A-www.fesliyanstudios.com.mp3" id="5_iac8f"]
+[ext_resource type="AudioStream" uid="uid://itvru3jpuo4j" path="res://Sound/battle/mixkit-cinematic-impact-thunder-1286.mp3" id="6_ocy6r"]
+[ext_resource type="AudioStream" uid="uid://bvuqmv234cuxw" path="res://Sound/battle/magic-strike-pixabay5856.mp3" id="7_5cpk3"]
+[ext_resource type="AudioStream" uid="uid://cuis4e8acm4qd" path="res://Sound/battle/mixkit-fast-sword-whoosh-2792.wav" id="8_dusjb"]
+[ext_resource type="AudioStream" uid="uid://cmc3r326mygcq" path="res://Sound/battle/547042__eponn__hit-impact-sword-3.wav" id="9_8xqtw"]
+[ext_resource type="AudioStream" uid="uid://dh8npslmrq76s" path="res://Sound/battle/sword-hit-7160pixabay.mp3" id="10_gx72b"]
+[ext_resource type="AudioStream" uid="uid://780vlhwrvu0b" path="res://Sound/battle/084373_heal-36672pixabay.mp3" id="11_sw67l"]
+[ext_resource type="AudioStream" uid="uid://yyb8ufcwgn2v" path="res://Sound/Music/march-of-the-rock-god-electric-guitar-instrumental-168773.mp3" id="12_ops68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubcjj"]
+bg_color = Color(100, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6ua3"]
+bg_color = Color(0.0313726, 0.47451, 0.0235294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axmo0"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qim2r"]
+bg_color = Color(0, 0, 0, 0.65098)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osjce"]
+bg_color = Color(0.00613233, 0.0344064, 0.152231, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3f4i"]
+bg_color = Color(0.0772596, 0.215556, 0.571954, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dc036"]
+bg_color = Color(0, 0, 0, 0.65098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5tjf"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwn50"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emqrq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_km8lf"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slsx1"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bhso"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7qq8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8rqr"]
+bg_color = Color(0, 0, 0, 0.65098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jadu7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hepwh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cc73u"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoc7r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ww1a2"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Boss4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ld6m")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1537.0
+offset_bottom = 863.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_ftxm6")
+
+[node name="EnemyContainer" type="VBoxContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -135.0
+offset_right = 135.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_ubcjj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s6ua3")
+step = 1.0
+value = 75.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : 75/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemy" type="TextureRect" parent="EnemyContainer"]
+layout_mode = 2
+texture = ExtResource("3_583nf")
+
+[node name="Element" type="Label" parent="EnemyContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_axmo0")
+text = "Phase 1"
+horizontal_alignment = 1
+
+[node name="PlayerMana" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -399.0
+offset_top = 175.5
+offset_right = 1.0
+offset_bottom = 225.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qim2r")
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerMana"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_osjce")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q3f4i")
+show_percentage = false
+
+[node name="Label" type="Label" parent="PlayerMana/ProgressBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -17.5
+offset_right = 69.0
+offset_bottom = 17.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Mana 75/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.845917
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dc036")
+
+[node name="PlayerData" type="HBoxContainer" parent="PlayerPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -550.0
+offset_top = -30.0
+offset_right = 550.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "Player
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_ubcjj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s6ua3")
+show_percentage = false
+
+[node name="Label" type="Label" parent="PlayerPanel/PlayerData/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "HP : 75/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ActionsPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.123
+offset_bottom = 0.172997
+grow_horizontal = 2
+
+[node name="buttons" type="HBoxContainer" parent="ActionsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -550.0
+offset_top = -34.5
+offset_right = 550.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Skills" type="Button" parent="ActionsPanel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5tjf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wwn50")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wwn50")
+text = "Skills"
+
+[node name="Guard" type="Button" parent="ActionsPanel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_emqrq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_km8lf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_km8lf")
+text = "Guard
+"
+
+[node name="Spells" type="Button" parent="ActionsPanel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_slsx1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7bhso")
+text = "Magic"
+
+[node name="Textbox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u7qq8")
+
+[node name="Label" type="Label" parent="Textbox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+autowrap_mode = 3
+
+[node name="Spells" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 753.0
+offset_top = 83.0
+offset_right = 1153.0
+offset_bottom = 446.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8rqr")
+
+[node name="Fireball" type="Button" parent="Spells"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Fireball - 10"
+
+[node name="Frostbolt" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 400.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Frostbolt - 10"
+
+[node name="Lightning" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 400.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Lightning - 10"
+
+[node name="Heal" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 400.0
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Heal - 5"
+
+[node name="Smite" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Smite - 15
+"
+
+[node name="Cancel" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 400.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Cancel
+"
+
+[node name="Attack" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 83.0
+offset_right = 400.0
+offset_bottom = 446.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8rqr")
+
+[node name="Attack" type="Button" parent="Attack"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Attack"
+
+[node name="Charge" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 400.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Charge"
+
+[node name="Vampiric_Thust" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 400.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Vampiric Thust"
+
+[node name="Dark_Slash" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 400.0
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Dark Slash"
+
+[node name="Wild_Swing" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Wild Swing
+"
+
+[node name="Cancel_A" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 400.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Cancel
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 500.0
+offset_right = 749.0
+offset_bottom = 546.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_cc73u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yoc7r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ww1a2")
+text = "Generate"
+
+[node name="FireBall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lxgmr")
+volume_db = -30.0
+
+[node name="FrostBolt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_iac8f")
+volume_db = -30.0
+
+[node name="LightningBolt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ocy6r")
+volume_db = -30.0
+
+[node name="Smite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5cpk3")
+volume_db = -10.0
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_dusjb")
+volume_db = -30.0
+
+[node name="BigHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_8xqtw")
+volume_db = -20.0
+
+[node name="BlockHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_gx72b")
+volume_db = -30.0
+
+[node name="heal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_sw67l")
+volume_db = -30.0
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ops68")
+volume_db = -30.0
+
+[connection signal="pressed" from="ActionsPanel/buttons/Skills" to="." method="_on_skills_pressed"]
+[connection signal="pressed" from="ActionsPanel/buttons/Guard" to="." method="_on_guard_pressed"]
+[connection signal="pressed" from="ActionsPanel/buttons/Spells" to="." method="_on_spells_pressed"]
+[connection signal="pressed" from="Spells/Fireball" to="." method="_on_fireball_pressed"]
+[connection signal="pressed" from="Spells/Frostbolt" to="." method="_on_frostbolt_pressed"]
+[connection signal="pressed" from="Spells/Lightning" to="." method="_on_lightning_pressed"]
+[connection signal="pressed" from="Spells/Heal" to="." method="_on_heal_pressed"]
+[connection signal="pressed" from="Spells/Smite" to="." method="_on_smite_pressed"]
+[connection signal="pressed" from="Spells/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Attack/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Attack/Charge" to="." method="_on_charge_pressed"]
+[connection signal="pressed" from="Attack/Vampiric_Thust" to="." method="_on_vampiric_thust_pressed"]
+[connection signal="pressed" from="Attack/Dark_Slash" to="." method="_on_dark_slash_pressed"]
+[connection signal="pressed" from="Attack/Wild_Swing" to="." method="_on_wild_swing_pressed"]
+[connection signal="pressed" from="Attack/Cancel_A" to="." method="_on_cancel_a_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

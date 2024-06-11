@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwbbid4a0e0bd"]
+
+[ext_resource type="Texture2D" uid="uid://c1wrdnfr7gt81" path="res://Art/sprite/pixel-8-bit-document-isolated-vector-39175253.jpg" id="1_8yurd"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(4, 4)
+scale = Vector2(0.0103093, 0.0102828)
+texture = ExtResource("1_8yurd")

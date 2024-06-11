@@ -1,0 +1,472 @@
+[gd_scene load_steps=21 format=3 uid="uid://vtaxyvk48hbv"]
+
+[ext_resource type="Texture2D" uid="uid://bbq2y5eia1u21" path="res://Art/Back ground/fight background.jpg" id="1_jf73i"]
+[ext_resource type="Script" path="res://Battle_System/Battle_system_RE.gd" id="1_xyu5h"]
+[ext_resource type="Texture2D" uid="uid://cvo6x7euc4okr" path="res://Art/Enemy/placeholder.png" id="2_bnksk"]
+[ext_resource type="Resource" uid="uid://chxbd4xsfcivd" path="res://Battle/Zombie.tres" id="2_p3p60"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubcjj"]
+bg_color = Color(100, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6ua3"]
+bg_color = Color(0.0313726, 0.47451, 0.0235294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qim2r"]
+bg_color = Color(0, 0, 0, 0.65098)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osjce"]
+bg_color = Color(0.00613233, 0.0344064, 0.152231, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3f4i"]
+bg_color = Color(0.0772596, 0.215556, 0.571954, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dc036"]
+bg_color = Color(0, 0, 0, 0.65098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5tjf"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwn50"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emqrq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_km8lf"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slsx1"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bhso"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7qq8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8rqr"]
+bg_color = Color(0, 0, 0, 0.65098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jadu7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hepwh"]
+
+[node name="Fight_Screen_Mob" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xyu5h")
+enemy = ExtResource("2_p3p60")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1537.0
+offset_bottom = 863.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_jf73i")
+
+[node name="EnemyContainer" type="VBoxContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -88.0
+offset_right = 100.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_ubcjj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s6ua3")
+step = 1.0
+value = 75.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : 75/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemy" type="TextureRect" parent="EnemyContainer"]
+layout_mode = 2
+texture = ExtResource("2_bnksk")
+
+[node name="PlayerMana" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -399.0
+offset_top = 175.5
+offset_right = 1.0
+offset_bottom = 225.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qim2r")
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerMana"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_osjce")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q3f4i")
+show_percentage = false
+
+[node name="Label" type="Label" parent="PlayerMana/ProgressBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -17.5
+offset_right = 69.0
+offset_bottom = 17.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Mana 75/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.845917
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dc036")
+
+[node name="PlayerData" type="HBoxContainer" parent="PlayerPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -550.0
+offset_top = -30.0
+offset_right = 550.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "Player
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_ubcjj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s6ua3")
+show_percentage = false
+
+[node name="Label" type="Label" parent="PlayerPanel/PlayerData/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "HP : 75/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ActionsPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.123
+offset_bottom = 0.172997
+grow_horizontal = 2
+
+[node name="buttons" type="HBoxContainer" parent="ActionsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -550.0
+offset_top = -34.5
+offset_right = 550.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Skills" type="Button" parent="ActionsPanel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5tjf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wwn50")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wwn50")
+text = "Skills"
+
+[node name="Guard" type="Button" parent="ActionsPanel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_emqrq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_km8lf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_km8lf")
+text = "Guard
+"
+
+[node name="Spells" type="Button" parent="ActionsPanel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_slsx1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7bhso")
+text = "Magic"
+
+[node name="Textbox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u7qq8")
+
+[node name="Label" type="Label" parent="Textbox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+
+[node name="Spells" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 753.0
+offset_top = 83.0
+offset_right = 1153.0
+offset_bottom = 446.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8rqr")
+
+[node name="Fireball" type="Button" parent="Spells"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Fireball - 10"
+
+[node name="Frostbolt" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 400.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Frostbolt - 10"
+
+[node name="Lightning" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 400.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Lightning - 10"
+
+[node name="Heal" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 400.0
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Heal - 5"
+
+[node name="Smite" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Smite - 15
+"
+
+[node name="Cancel" type="Button" parent="Spells"]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 400.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Cancel
+"
+
+[node name="Attack" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 83.0
+offset_right = 400.0
+offset_bottom = 446.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8rqr")
+
+[node name="Attack" type="Button" parent="Attack"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Attack"
+
+[node name="Charge" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 400.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Charge"
+
+[node name="Vampiric_Thust" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 400.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Vampiric Thust"
+
+[node name="Dark_Slash" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 400.0
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Dark Slash"
+
+[node name="Wild_Swing" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Wild Swing
+"
+
+[node name="Cancel_A" type="Button" parent="Attack"]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 400.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_jadu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hepwh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hepwh")
+text = "Cancel
+"
+
+[connection signal="pressed" from="ActionsPanel/buttons/Skills" to="." method="_on_skills_pressed"]
+[connection signal="pressed" from="ActionsPanel/buttons/Guard" to="." method="_on_guard_pressed"]
+[connection signal="pressed" from="ActionsPanel/buttons/Spells" to="." method="_on_spells_pressed"]
+[connection signal="pressed" from="Spells/Fireball" to="." method="_on_fireball_pressed"]
+[connection signal="pressed" from="Spells/Frostbolt" to="." method="_on_frostbolt_pressed"]
+[connection signal="pressed" from="Spells/Lightning" to="." method="_on_lightning_pressed"]
+[connection signal="pressed" from="Spells/Heal" to="." method="_on_heal_pressed"]
+[connection signal="pressed" from="Spells/Smite" to="." method="_on_smite_pressed"]
+[connection signal="pressed" from="Spells/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Attack/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Attack/Charge" to="." method="_on_charge_pressed"]
+[connection signal="pressed" from="Attack/Vampiric_Thust" to="." method="_on_vampiric_thust_pressed"]
+[connection signal="pressed" from="Attack/Dark_Slash" to="." method="_on_dark_slash_pressed"]
+[connection signal="pressed" from="Attack/Wild_Swing" to="." method="_on_wild_swing_pressed"]
+[connection signal="pressed" from="Attack/Cancel_A" to="." method="_on_cancel_a_pressed"]

@@ -1,0 +1,322 @@
+[gd_scene load_steps=10 format=3 uid="uid://bkky5qs22ftgj"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_k8otv"]
+[ext_resource type="Script" path="res://Q1.gd" id="2_5r3gh"]
+[ext_resource type="Script" path="res://Q2.gd" id="3_orr11"]
+[ext_resource type="Script" path="res://Q3.gd" id="4_mwpxx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mii3"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uggnw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00ufj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tkvx7"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6j23"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k8otv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="New" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 64.0
+offset_right = 1024.0
+offset_bottom = 128.0
+text = "New Game"
+
+[node name="Load" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 192.0
+offset_right = 1024.0
+offset_bottom = 256.0
+text = "Load Game"
+
+[node name="Credits" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 320.0
+offset_right = 1024.0
+offset_bottom = 384.0
+text = "Credits"
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 448.0
+offset_right = 1024.0
+offset_bottom = 512.0
+text = "Exit"
+
+[node name="Q1" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 640.0
+offset_bottom = 576.0
+script = ExtResource("2_5r3gh")
+
+[node name="Label" type="Label" parent="Q1"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 288.0
+offset_bottom = 496.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1mii3")
+text = "What is your background 
+
+	1. A street urchin determined to find a place in the world
+
+	2. A child of a merchant just looking to escape the boreing days with adventure.
+
+	3. A wealthy child of a noble breaking away from their family to forge their own path. 
+
+
+
+"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Q1"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 32.0
+offset_right = 496.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option 1"
+
+[node name="Button2" type="Button" parent="Q1"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 160.0
+offset_right = 496.0
+offset_bottom = 224.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option 2"
+
+[node name="Button3" type="Button" parent="Q1"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 288.0
+offset_right = 496.0
+offset_bottom = 352.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option 3"
+
+[node name="Button4" type="Button" parent="Q1"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 408.0
+offset_right = 496.0
+offset_bottom = 472.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "Quit"
+
+[node name="Q2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 576.0
+script = ExtResource("3_orr11")
+
+[node name="Label" type="Label" parent="Q2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 288.0
+offset_bottom = 496.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1mii3")
+text = "What is your goal 
+
+1. To have your name known far and wide.
+
+2. To earn Lots of money in persuit of future endevors
+
+3. To test your limits in battle.
+
+"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Q2"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 32.0
+offset_right = 496.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option"
+
+[node name="Button2" type="Button" parent="Q2"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 160.0
+offset_right = 496.0
+offset_bottom = 224.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option"
+
+[node name="Button3" type="Button" parent="Q2"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 288.0
+offset_right = 496.0
+offset_bottom = 352.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option"
+
+[node name="Button4" type="Button" parent="Q2"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 408.0
+offset_right = 496.0
+offset_bottom = 472.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "Quit"
+
+[node name="Q3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 576.0
+script = ExtResource("4_mwpxx")
+
+[node name="Label" type="Label" parent="Q3"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 288.0
+offset_bottom = 496.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1mii3")
+text = "How will you aproach the tests ahed of you.
+
+1. Through might and power
+
+2. with tricks and luck
+
+3. with the power of brains over brawn"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Q3"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 32.0
+offset_right = 496.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option"
+
+[node name="Button2" type="Button" parent="Q3"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 160.0
+offset_right = 496.0
+offset_bottom = 224.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option"
+
+[node name="Button3" type="Button" parent="Q3"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 288.0
+offset_right = 496.0
+offset_bottom = 352.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "option"
+
+[node name="Button4" type="Button" parent="Q3"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 408.0
+offset_right = 496.0
+offset_bottom = 472.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uggnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_00ufj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkvx7")
+text = "Quit"
+
+[node name="Credits" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 768.0
+offset_bottom = 576.0
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 688.0
+offset_bottom = 496.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_s6j23")
+text = "	Dungeon Tilemap - Aztharis
+	Forrest and buildings tileset by - Pixivan
+	Main Character - Szadiart
+	various sound effects by - Mixkit, Fstudios, Pixabay, 
+	Background music - Kevin Macleod
+	Combat system base - Jon Topielski
+	March of the rock God (Boss theme) Pixabay - free-to-use-audio
+	level design, fight design, various systems - James Myers
+	"
+
+[connection signal="pressed" from="Panel/New" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="Panel/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Panel/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Panel/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Q1/Button" to="Q1" method="_on_button_pressed"]
+[connection signal="pressed" from="Q1/Button2" to="Q1" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Q1/Button3" to="Q1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Q1/Button4" to="Q1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Q2/Button" to="Q2" method="_on_button_pressed"]
+[connection signal="pressed" from="Q2/Button2" to="Q2" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Q2/Button3" to="Q2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Q2/Button4" to="Q2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Q3/Button" to="Q3" method="_on_button_pressed"]
+[connection signal="pressed" from="Q3/Button2" to="Q3" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Q3/Button3" to="Q3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Q3/Button4" to="Q3" method="_on_button_4_pressed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7oecyp61qt7q"]
+
+[ext_resource type="Texture2D" uid="uid://utd5ixyv5xew" path="res://Art/sprite/Mob.png" id="1_gqobm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3plt"]
+size = Vector2(16, 24)
+
+[node name="mob" type="Area2D"]
+position = Vector2(0, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_gqobm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m3plt")

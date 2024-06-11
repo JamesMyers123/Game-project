@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bxnta7s6c3b0g"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_qc4ue"]
+[ext_resource type="Texture2D" uid="uid://btpfhojj08lm2" path="res://Art/Enemy/Berserker.png" id="2_rdkq2"]
+
+[resource]
+script = ExtResource("1_qc4ue")
+name = "Boss_1"
+texture = ExtResource("2_rdkq2")
+health = 1000
+damage = 20
+firevuln = 1.2
+lightningvuln = 1.2
+icevuln = 1.2
+Move_name = "NULL"
+Move_type = 0
+Move_damage = 0.0
+Move_heal = 0
+Chance = 0
+gold = 5000

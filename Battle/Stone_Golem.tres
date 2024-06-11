@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cktbv3kttt8mj"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_8yowh"]
+[ext_resource type="Texture2D" uid="uid://6qjcijs867bb" path="res://Art/Enemy/Stone_Golem.png" id="2_do305"]
+
+[resource]
+script = ExtResource("1_8yowh")
+name = "Stone Golem"
+texture = ExtResource("2_do305")
+health = 6000
+damage = 15
+firevuln = 0.8
+lightningvuln = 0.8
+icevuln = 0.8
+Move_name = "Smash"
+Move_type = 2
+Move_damage = 4.0
+Move_heal = 0
+Chance = 25
+gold = 3000

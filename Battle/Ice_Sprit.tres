@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ch4qr378edrkk"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_8jtm8"]
+[ext_resource type="Texture2D" uid="uid://b3hm1oiki8fi" path="res://Art/Enemy/Ice_Spirit.png" id="2_lo248"]
+
+[resource]
+script = ExtResource("1_8jtm8")
+name = "Ice Spirit"
+texture = ExtResource("2_lo248")
+health = 500
+damage = 10
+firevuln = 2.0
+lightningvuln = 1.0
+icevuln = -0.2
+Move_name = "Icy Wind"
+Move_type = 1
+Move_damage = 3.0
+Move_heal = 0
+Chance = 25
+gold = 1000

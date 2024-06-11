@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b3bdwbq1q1634"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_1rqlb"]
+[ext_resource type="Texture2D" uid="uid://feqrsffe4tgn" path="res://Art/Enemy/Final_Boss.png" id="2_5keob"]
+
+[resource]
+script = ExtResource("1_1rqlb")
+name = "Reaper"
+texture = ExtResource("2_5keob")
+health = 10000
+damage = 75
+firevuln = 1.0
+lightningvuln = 1.0
+icevuln = 1.0
+Move_name = "NA"
+Move_type = 0
+Move_damage = 1.0
+Move_heal = 0
+Chance = 50
+gold = 1

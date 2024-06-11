@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bcguey6o6r0bj"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_ydfni"]
+[ext_resource type="Texture2D" uid="uid://cqr2h6ul4o3ng" path="res://Art/Enemy/Treant.png" id="2_676ts"]
+
+[resource]
+script = ExtResource("1_ydfni")
+name = "Treant"
+texture = ExtResource("2_676ts")
+health = 1000
+damage = 20
+firevuln = 2.0
+lightningvuln = 0.4
+icevuln = 0.8
+Move_name = "Spores"
+Move_type = 1
+Move_damage = 4.0
+Move_heal = 0
+Chance = 25
+gold = 2000

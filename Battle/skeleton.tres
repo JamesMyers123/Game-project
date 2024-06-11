@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b7noal2snkc54"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_4gp7r"]
+[ext_resource type="Texture2D" uid="uid://b6q1tyvpk1qb1" path="res://Art/Enemy/skeleton.png" id="2_xkn0o"]
+
+[resource]
+script = ExtResource("1_4gp7r")
+name = "skeleton"
+texture = ExtResource("2_xkn0o")
+health = 300
+damage = 10
+firevuln = 1.2
+lightningvuln = 1.2
+icevuln = 1.2
+Move_name = "Heavy swing"
+Move_type = 2
+Move_damage = 2.0
+Move_heal = 0
+Chance = 50
+gold = 2000

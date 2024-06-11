@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bvsqnchvmju1g"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_ko3c2"]
+[ext_resource type="Texture2D" uid="uid://dr8f5yyibeixp" path="res://Art/Enemy/Slime.png" id="2_5ht06"]
+
+[resource]
+script = ExtResource("1_ko3c2")
+name = "Slime"
+texture = ExtResource("2_5ht06")
+health = 200
+damage = 3
+firevuln = 20.0
+lightningvuln = 20.0
+icevuln = 20.0
+Move_name = "Drain"
+Move_type = 4
+Move_damage = 2.0
+Move_heal = 0
+Chance = 50
+gold = 200

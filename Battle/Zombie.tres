@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://chxbd4xsfcivd"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_q7rx5"]
+[ext_resource type="Texture2D" uid="uid://rvl8nepbso3q" path="res://Art/Enemy/Zombie.png" id="2_8c7ro"]
+
+[resource]
+script = ExtResource("1_q7rx5")
+name = "Zombie"
+texture = ExtResource("2_8c7ro")
+health = 50
+damage = 5
+firevuln = 1.0
+lightningvuln = 1.0
+icevuln = 1.0
+Move_name = "Rot"
+Move_type = 3
+Move_damage = 0.0
+Move_heal = -5
+Chance = 25
+gold = 175

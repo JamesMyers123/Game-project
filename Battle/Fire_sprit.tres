@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dm3kony7tbdxw"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_pkm2h"]
+[ext_resource type="Texture2D" uid="uid://cg6f0xym7th11" path="res://Art/Enemy/Fire_Spirit.png" id="2_b51yl"]
+
+[resource]
+script = ExtResource("1_pkm2h")
+name = "Fire Spirit"
+texture = ExtResource("2_b51yl")
+health = 500
+damage = 10
+firevuln = -0.2
+lightningvuln = 2.0
+icevuln = 1.0
+Move_name = "Sprit Fire"
+Move_type = 1
+Move_damage = 3.0
+Move_heal = 0
+Chance = 25
+gold = 1000

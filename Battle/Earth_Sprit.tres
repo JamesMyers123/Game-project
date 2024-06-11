@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dnas364vlrthl"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_ptnh4"]
+[ext_resource type="Texture2D" uid="uid://c2kci8v0ki5js" path="res://Art/Enemy/Earth_spirit.png" id="2_2t71s"]
+
+[resource]
+script = ExtResource("1_ptnh4")
+name = "Earth Sprit"
+texture = ExtResource("2_2t71s")
+health = 1000
+damage = 15
+firevuln = 0.9
+lightningvuln = 0.9
+icevuln = 0.9
+Move_name = "Wrath of Nature"
+Move_type = 4
+Move_damage = 2.0
+Move_heal = 0
+Chance = 50
+gold = 4000

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://qnf6vi2uyiju"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_rsoa8"]
+[ext_resource type="Texture2D" uid="uid://c32v7mgfxikjn" path="res://Art/Enemy/dryad.png" id="2_15a83"]
+
+[resource]
+script = ExtResource("1_rsoa8")
+name = "dryad"
+texture = ExtResource("2_15a83")
+health = 4000
+damage = 50
+firevuln = 2.0
+lightningvuln = 1.0
+icevuln = 1.0
+Move_name = "Spines"
+Move_type = 1
+Move_damage = 6.0
+Move_heal = 0
+Chance = 25
+gold = 10000

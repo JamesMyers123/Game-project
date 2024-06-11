@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://odm8yuglk1mv"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_w7165"]
+[ext_resource type="Texture2D" uid="uid://cf0swfu12nl6m" path="res://Art/Enemy/Lightning_Spirit.png" id="2_6x8fk"]
+
+[resource]
+script = ExtResource("1_w7165")
+name = "Lightning Spirit"
+texture = ExtResource("2_6x8fk")
+health = 500
+damage = 5
+firevuln = 1.0
+lightningvuln = -0.2
+icevuln = 2.0
+Move_name = "Ball Lightning"
+Move_type = 1
+Move_damage = 3.0
+Move_heal = 0
+Chance = 25
+gold = 1000

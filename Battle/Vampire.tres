@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://by1ymfw85dghn"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_7sixj"]
+[ext_resource type="Texture2D" uid="uid://7s534cybbs6e" path="res://Art/Enemy/Vampire.png" id="2_dg7cx"]
+
+[resource]
+script = ExtResource("1_7sixj")
+name = "Vampire"
+texture = ExtResource("2_dg7cx")
+health = 2000
+damage = 30
+firevuln = 1.5
+lightningvuln = 1.5
+icevuln = 1.5
+Move_name = "Drain"
+Move_type = 4
+Move_damage = 3.0
+Move_heal = 0
+Chance = 25
+gold = 3000

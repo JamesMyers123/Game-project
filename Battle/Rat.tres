@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dci1c2y78vdox"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_wt4gn"]
+[ext_resource type="Texture2D" uid="uid://da8woh8c5t13g" path="res://Art/Enemy/Rat.png" id="2_yyail"]
+
+[resource]
+script = ExtResource("1_wt4gn")
+name = "Rat"
+texture = ExtResource("2_yyail")
+health = 25
+damage = 2
+firevuln = 1.5
+lightningvuln = 1.5
+icevuln = 1.5
+Move_name = "Big Bite"
+Move_type = 0
+Move_damage = 3.0
+Move_heal = 0
+Chance = 25
+gold = 100

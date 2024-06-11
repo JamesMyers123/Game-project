@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dydyfmvkx6rfp"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_0kncw"]
+[ext_resource type="Texture2D" uid="uid://bejdfpcs1owr" path="res://Art/Enemy/elemental_Boss.png" id="2_vvujj"]
+
+[resource]
+script = ExtResource("1_0kncw")
+name = "Elemental"
+texture = ExtResource("2_vvujj")
+health = 5000
+damage = 50
+firevuln = 2.0
+lightningvuln = 2.0
+icevuln = 2.0
+Move_name = "null"
+Move_type = 0
+Move_damage = 1.0
+Move_heal = 0
+Chance = 50
+gold = 10000

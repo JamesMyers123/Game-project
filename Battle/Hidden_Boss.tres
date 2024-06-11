@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c0lk40tge2eni"]
+
+[ext_resource type="Script" path="res://Battle/Enemy.gd" id="1_0trt4"]
+[ext_resource type="Texture2D" uid="uid://cotjw2el8lk01" path="res://Art/Enemy/Hidden_boss.png" id="2_lvlk4"]
+
+[resource]
+script = ExtResource("1_0trt4")
+name = "Blood Knight"
+texture = ExtResource("2_lvlk4")
+health = 10000
+damage = 100
+firevuln = 1.5
+lightningvuln = 1.5
+icevuln = 1.5
+Move_name = "NA"
+Move_type = 0
+Move_damage = 1.0
+Move_heal = 0
+Chance = 50
+gold = 100000
